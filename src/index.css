@@ -1,0 +1,254 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Monastery360 Design System - Spiritual Heritage Colors & Gradients */
+
+@layer base {
+  :root {
+    /* Core spiritual colors */
+    --background: 30 8% 97%;
+    --foreground: 15 25% 12%;
+    
+    /* Sacred monastery colors */
+    --sacred-red: 350 75% 35%;
+    --sacred-red-light: 350 65% 45%;
+    --sacred-gold: 45 85% 55%;
+    --sacred-gold-light: 45 90% 65%;
+    --monastery-brown: 25 45% 25%;
+    --monastery-brown-light: 25 35% 35%;
+    --spiritual-white: 30 15% 98%;
+    --prayer-blue: 220 45% 25%;
+    --prayer-blue-light: 220 35% 35%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--sacred-red)) 0%, hsl(var(--sacred-gold)) 50%, hsl(var(--prayer-blue)) 100%);
+    --gradient-monastery: linear-gradient(180deg, hsl(var(--monastery-brown) / 0.9) 0%, hsl(var(--sacred-red) / 0.8) 100%);
+    --gradient-spiritual: linear-gradient(45deg, hsl(var(--sacred-gold) / 0.1) 0%, hsl(var(--prayer-blue) / 0.1) 100%);
+    --gradient-sunset: linear-gradient(135deg, hsl(var(--sacred-gold)) 0%, hsl(var(--sacred-red)) 70%);
+    
+    /* Shadows with spiritual glow */
+    --shadow-monastery: 0 10px 40px -10px hsl(var(--sacred-red) / 0.3);
+    --shadow-golden: 0 8px 30px -8px hsl(var(--sacred-gold) / 0.4);
+    --shadow-spiritual: 0 20px 60px -15px hsl(var(--prayer-blue) / 0.2);
+    
+    /* Animation values */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spiritual: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+
+    /* Themed component colors */
+    --card: var(--spiritual-white);
+    --card-foreground: var(--foreground);
+
+    --popover: var(--spiritual-white);
+    --popover-foreground: var(--foreground);
+
+    --primary: var(--sacred-red);
+    --primary-foreground: var(--spiritual-white);
+
+    --secondary: var(--sacred-gold);
+    --secondary-foreground: var(--monastery-brown);
+
+    --muted: 30 10% 94%;
+    --muted-foreground: var(--monastery-brown-light);
+
+    --accent: var(--prayer-blue);
+    --accent-foreground: var(--spiritual-white);
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: var(--spiritual-white);
+
+    --border: 30 15% 88%;
+    --input: 30 15% 92%;
+    --ring: var(--sacred-gold);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans overflow-x-hidden;
+  }
+}
+
+@layer components {
+  /* Hero and immersive sections */
+  .hero-section {
+    @apply relative min-h-screen flex items-center justify-center;
+    background: var(--gradient-hero);
+  }
+  
+  .monastery-card {
+    @apply relative overflow-hidden rounded-xl bg-card shadow-lg;
+    box-shadow: var(--shadow-monastery);
+    transition: var(--transition-spiritual);
+  }
+  
+  .monastery-card:hover {
+    @apply scale-105;
+    box-shadow: var(--shadow-spiritual);
+  }
+  
+  .spiritual-glow {
+    @apply relative;
+  }
+  
+  .spiritual-glow::before {
+    content: '';
+    @apply absolute inset-0 rounded-full opacity-0 transition-opacity duration-500;
+    background: radial-gradient(circle, hsl(var(--sacred-gold) / 0.3) 0%, transparent 70%);
+  }
+  
+  .spiritual-glow:hover::before {
+    @apply opacity-100;
+  }
+  
+  /* Cultural typography */
+  .monastery-title {
+    @apply text-2xl md:text-4xl font-bold;
+    background: var(--gradient-sunset);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .cultural-text {
+    @apply text-lg leading-relaxed;
+    color: hsl(var(--monastery-brown));
+  }
+  
+  /* Parallax effects */
+  .parallax-bg {
+    @apply absolute inset-0 bg-cover bg-center bg-fixed;
+    transform: translateZ(0);
+  }
+  
+  /* Interactive elements */
+  .prayer-wheel {
+    @apply inline-block transition-transform duration-700 ease-in-out;
+  }
+  
+  .prayer-wheel:hover {
+    @apply rotate-180;
+  }
+  
+  /* Navigation enhancements */
+  .nav-link {
+    @apply relative px-4 py-2 transition-all duration-300;
+    color: hsl(var(--monastery-brown));
+  }
+  
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300;
+    background: var(--gradient-sunset);
+  }
+  
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+  
+  .nav-link.active {
+    color: hsl(var(--sacred-red));
+  }
+  
+  .nav-link.active::after {
+    @apply w-full;
+  }
+
+  /* Custom animations */
+  @keyframes scroll-left {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(5deg); }
+  }
+
+  @keyframes glow {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite;
+  }
+
+  /* Gradient backgrounds */
+  .bg-gradient-subtle {
+    background: var(--gradient-spiritual);
+  }
+  
+  .bg-gradient-sunset {
+    background: var(--gradient-sunset);
+  }
+  
+  .bg-gradient-monastery {
+    background: var(--gradient-monastery);
+  }
+}
