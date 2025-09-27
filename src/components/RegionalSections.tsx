@@ -8,36 +8,40 @@ const regions = [
     name: 'North Sikkim',
     title: 'Land of High Altitude Wonders',
     description: 'Explore pristine lakes, snow-capped peaks, and ancient monasteries at breathtaking altitudes.',
-    image: 'https://images.unsplash.com/photo-1464822759844-d150ad6d1904?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+    image: 'https://www.tourmyindia.com/blog//wp-content/uploads/2021/11/Best-Places-to-Visit-in-North-Sikkim-Gurudongmar-Lake-Tourism.jpg',
     highlights: ['Gurudongmar Lake', 'Lachen Monastery', 'Zero Point', 'Thangu Valley'],
-    color: 'from-blue-600/80 to-purple-600/80'
+    color: 'from-gray-400/40 to-gray-600/60'
+    
   },
   {
     id: 'east',
     name: 'East Sikkim',
     title: 'Gateway to Spiritual Heritage',
     description: 'Discover Gangtok\'s urban charm alongside magnificent monasteries and sacred lakes.',
-    image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+    image: 'https://www.connectingnortheast.com/images/gallery/east-sikkim3.jpg',
     highlights: ['Rumtek Monastery', 'Tsomgo Lake', 'Enchey Monastery', 'Hanuman Tok'],
-    color: 'from-red-600/80 to-orange-600/80'
+    color: 'from-gray-400/40 to-gray-600/60'
+    
   },
   {
     id: 'west',
     name: 'West Sikkim',
     title: 'Ancient Heritage & Natural Beauty',
     description: 'Journey through historic monasteries, sacred lakes, and the cultural heart of Sikkim.',
-    image: 'https://images.unsplash.com/photo-1571892806085-bd5ca5e1e3b1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+    image: 'https://media1.thrillophilia.com/filestore/t6pq0avgbsh0pa1a5povfkimnok5_1590733901_Ravangla_-_6.jpg',
     highlights: ['Pemayangtse Monastery', 'Khecheopalri Lake', 'Tashiding Monastery', 'Yuksom'],
-    color: 'from-green-600/80 to-teal-600/80'
+    color: 'from-gray-400/40 to-gray-600/60'
+    
   },
   {
     id: 'south',
     name: 'South Sikkim',
     title: 'Cultural Heritage & Adventures',
     description: 'Experience rich traditions, historic temples, and thrilling adventures in southern valleys.',
-    image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+    image: 'https://www.tourmyindia.com/blog//wp-content/uploads/2022/05/Namchi-Chardham-768x461.jpg',
     highlights: ['Ralang Monastery', 'Namchi', 'Ravangla', 'Tendong Hill'],
-    color: 'from-yellow-600/80 to-red-600/80'
+    color: 'from-gray-400/40 to-gray-600/60'
+
   }
 ];
 

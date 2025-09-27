@@ -2,16 +2,19 @@ import { useEffect } from "react";
 
 const Monastery360 = () => {
   useEffect(() => {
-    // Use pannellum from window (loaded by <script>)
     // @ts-ignore
     window.pannellum.viewer("panorama", {
       type: "equirectangular",
-      panorama: "/monastery360.jpg", // make sure this file is inside /public
+      panorama: "/monastery360.jpg", // make sure the image is in public/
       autoLoad: true,
       showControls: true,
       pitch: 0,
       yaw: 180,
       hfov: 110,
+      autoRotate: 2,              // rotates slowly, adjust speed (degrees per second)
+      autoRotateInactivityDelay: 1000, // stop auto-rotate after 1 second of user interaction
+      mouseZoom: true,              // allow zooming
+      dragRotate: true,             // allow drag rotation
     });
   }, []);
 
